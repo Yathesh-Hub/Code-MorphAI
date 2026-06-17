@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+.editor {
+  flex: 1;
+  width: 100%;
+  min-height: 380px;
+  padding: 1.25rem;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border: none;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.75;
+  tab-size: 2;
+  transition: background var(--transition);
+  resize: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.editor:focus { background: rgba(13, 18, 35, 0.4); outline: none; }
+
+.editor[readonly] { opacity: 0.92; cursor: default; }
+
+.editor::placeholder { color: var(--text-muted); font-style: italic; }
+
+.highlightWrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  min-height: 380px;
+  background: var(--bg-input);
+  overflow: auto;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.highlightWrapper pre {
+  margin: 0 !important;
+  width: 100%;
+}
