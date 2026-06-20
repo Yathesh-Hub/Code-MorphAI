@@ -139,69 +139,6 @@
   color: var(--text-secondary);
 }
 
-/* Dashboard Content Grid */
-.mainGrid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-/* Activity Chart Card */
-.chartCard {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.chartHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.chartTitle h3 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.chartLegend {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.legendItem {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.legendDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-
-.svgWrapper {
-  width: 100%;
-}
-
-.chartSvg {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
 /* Quick Actions */
 .quickActions {
   display: flex;
@@ -372,12 +309,6 @@
 }
 
 /* Responsiveness */
-@media (max-width: 960px) {
-  .mainGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 640px) {
   .page {
     padding: 1.5rem 1rem;
