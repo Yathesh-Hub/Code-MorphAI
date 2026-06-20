@@ -7,7 +7,23 @@ const { apiLimiter } = require('./middleware/rateLimiter');
 const app = express();
 
 // Middleware
-app.use(cors({origin: ['http://localhost:5173','https://code-morphai-mu.vercel.app'],credentials: true,}));
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    // Allow any vercel.app subdomain or exact matches
+    if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+}));
 app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev'));
 app.use('/api', apiLimiter);
