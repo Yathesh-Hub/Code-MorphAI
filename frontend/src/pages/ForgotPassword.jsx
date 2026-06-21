@@ -51,7 +51,7 @@ export default function ForgotPassword() {
               <label htmlFor="email">Email address</label>
               <div className={styles.inputWrapper}>
                 <Mail size={15} className={styles.inputIcon} />
-                <input id="email" type="email" placeholder="you@example.com"
+                <input id="email" type="email"
                   value={email} onChange={e => setEmail(e.target.value)}
                   required autoComplete="email" />
               </div>
