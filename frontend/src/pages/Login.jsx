@@ -64,7 +64,7 @@ export default function Login() {
               <label htmlFor="email">Email address</label>
               <div className={styles.inputWrapper}>
                 <Mail size={15} className={styles.inputIcon} />
-                <input id="email" type="email" placeholder="you@example.com"
+                <input id="email" type="email"
                   value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
                   required autoComplete="email" />
               </div>
@@ -74,7 +74,7 @@ export default function Login() {
               <label htmlFor="password">Password</label>
               <div className={styles.inputWrapper}>
                 <Lock size={15} className={styles.inputIcon} />
-                <input id="password" type="password" placeholder="Enter your password"
+                <input id="password" type="password"
                   value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
                   required autoComplete="current-password" />
               </div>

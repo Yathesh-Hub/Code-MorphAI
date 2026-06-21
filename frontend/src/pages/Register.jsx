@@ -65,7 +65,7 @@ export default function Register() {
               <label htmlFor="name">Full name</label>
               <div className={styles.inputWrapper}>
                 <User size={15} className={styles.inputIcon} />
-                <input id="name" type="text" placeholder="Your name"
+                <input id="name" type="text"
                   value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
                   required autoComplete="name" />
               </div>
@@ -75,7 +75,7 @@ export default function Register() {
               <label htmlFor="email">Email address</label>
               <div className={styles.inputWrapper}>
                 <Mail size={15} className={styles.inputIcon} />
-                <input id="email" type="email" placeholder="you@example.com"
+                <input id="email" type="email"
                   value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
                   required autoComplete="email" />
               </div>
