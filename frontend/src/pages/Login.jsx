@@ -84,6 +84,12 @@ export default function Login() {
               {loading ? <span className={styles.btnSpinner} /> : <ArrowRight size={16} />}
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
+
+            <div style={{ textAlign: 'right', marginTop: '-0.5rem' }}>
+              <Link to="/forgot-password" style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>
+                Forgot password?
+              </Link>
+            </div>
           </form>
 
           <p className={styles.switch}>

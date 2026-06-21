@@ -7,6 +7,8 @@ CREATE TABLE IF NOT EXISTS users (
   name TEXT NOT NULL,
   email TEXT UNIQUE NOT NULL,
   password TEXT NOT NULL,
+  reset_otp TEXT,
+  reset_otp_expiry TIMESTAMPTZ,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 

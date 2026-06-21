@@ -4,10 +4,13 @@ import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 import Dashboard from './pages/Dashboard';
+import ForgotPassword from './pages/ForgotPassword';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
+import ResetPassword from './pages/ResetPassword';
 import Translator from './pages/Translator';
+import VerifyOtp from './pages/VerifyOtp';
 
 function AppLayout({ children }) {
   return (
@@ -35,6 +38,9 @@ export default function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/verify-otp" element={<VerifyOtp />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
 
           <Route path="/dashboard" element={
             <ProtectedRoute>
