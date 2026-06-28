@@ -314,7 +314,7 @@
 .lineCount {
   font-size: 0.72rem;
   color: var(--text-muted);
-  font-family: 'Geist Mono', monospace;
+  font-family: inherit;
 }
 
 .copyBtn {
@@ -517,7 +517,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
-  font-family: 'Geist Mono', monospace;
+  font-family: inherit;
   margin-top: 0.1rem;
 }
 
@@ -578,7 +578,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   text-align: right;
-  font-family: 'Geist Mono', monospace;
+  font-family: inherit;
 }
 
 .suggestionsList, .issuesList {
@@ -724,7 +724,7 @@
   font-size: 0.78rem;
   color: var(--text-secondary);
   line-height: 1.5;
-  font-family: 'Geist Mono', monospace;
+  font-family: inherit;
   white-space: pre-wrap;
 }
 
